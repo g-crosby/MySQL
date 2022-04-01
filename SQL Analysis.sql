@@ -12,8 +12,7 @@ CREATE TABLE Creators (
     durationSeconds INT,
     tagCount INT
 );
-
--- All data was scraped via Python using the Youtube API, along with most of the preprocessing -- 
+ 
 
 -- Taks CSV data and bulk add to the new Creators Table --
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/youtube.csv'
