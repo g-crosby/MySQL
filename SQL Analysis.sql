@@ -78,16 +78,6 @@ select channelTitle, round((sum(commentCount) / count(video_id))) as AverageComm
 from creators
 group by 1;
 
--- See Cummulative View Count -- 
-select 
-	video_id,
-    viewCount,
-	likeCount,
-    datePublished,
-    durationSeconds,
-    sum(viewCount) over(order by datePublished) as RunningViews
-from creators
-order by datePublished;
 
 -- Running Total of Views Over Last 50 Videos -- 
 with Weeks as (
